@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-<p>There are over {{{ $number_of_cats }}} cats on this page.</p>
+<p>There are over cats on this page.</p>
 
 <hr>
 
