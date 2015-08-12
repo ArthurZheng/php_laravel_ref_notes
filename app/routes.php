@@ -11,7 +11,26 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+//Route::get('/', function()
+//{
+//	return View::make('hello');
+//});
+
+Route::get('/', function(){
+//	return "All cats are here.";
+	return Redirect::to('cats');
+});
+
+
+Route::get('cats', function(){
+	return "You are being redirected to cats here.";
+});
+
+Route::get('cats/{id}', function($id){
+	return "Cat id is $id";
+}) -> where('id', '[0-9]+');
+
+
+Route::get('about', function(){
+	return View::make('about') ->with('number_of_cats', 8888);
 });
