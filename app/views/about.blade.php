@@ -1,5 +1,10 @@
-<h1>About This Site</h1>
+@extends('master')
 
+@section('header')
+<h1>About This Site</h1>
+@stop
+
+@section('content')
 <p>There are over {{{ $number_of_cats }}} cats on this page.</p>
 
 <hr>
@@ -16,3 +21,5 @@
  The environment is either local OR staging...
 
 @endif
+
+@stop
