@@ -37,11 +37,15 @@ Route::get('about', function(){
 
 Route::get('cats', function(){
 	$cats = Cat::all();
+    var_dump($cats);
 	return View::make('cats.index') -> with('cats', $cats);
 });
 
 Route::get('cats/breeds/{name}', function($name){
 	$breed = Breed::whereName($name) ->with('cats') ->first();
+
+    var_dump($breed->name);
+
 	return View::make('cats.index')
 		-> with('breed', $breed)
 		-> with('cats', $breed->cats);
