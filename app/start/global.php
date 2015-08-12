@@ -80,6 +80,7 @@ App::down(function()
 
 require app_path().'/filters.php';
 
+// function that takes care of invalid url, showing this message to invalid url site wide;
 App::missing(function($exception){
 	return Response::make("Page not found says Jun in app/start/global.php", 404);
 });

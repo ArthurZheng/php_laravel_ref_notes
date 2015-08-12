@@ -26,7 +26,8 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('homestead'),
+	'local' => array('Andrews-MacBook-Pro-22.local'),
+//    return $_SERVER['MY_LARAVEL_ENV'];
 
 ));
 
